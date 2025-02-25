@@ -884,18 +884,19 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-// $databases['default']['default'] = array (
-//   'database' => 'u196267237_WlBXZ',
-//   'username' => 'u196267237_Ygjr6',
-//   'password' => 'ezVymUEE9V',
-//   'prefix' => 'neiw_',
-//   'host' => '127.0.0.1',
-//   'port' => '3306',
-//   'isolation_level' => 'READ COMMITTED',
-//   'driver' => 'mysql',
-//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-//   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-// );
+$databases['default']['default'] = array (
+  'database' => 'u196267237_WlBXZ',
+  'username' => 'u196267237_Ygjr6',
+  'password' => 'ezVymUEE9V',
+  'prefix' => 'neiw_',
+  'host' => '127.0.0.1',
+  'port' => '3306',
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
+
 $settings['config_sync_directory'] = 'config/sync';
 
 // Automatically generated include for settings managed by ddev.
