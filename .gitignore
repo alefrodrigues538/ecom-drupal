@@ -60,3 +60,5 @@ web.config
 /drush
 /drupal.phar
 /drupal
+sites/settings.local.php
+sites/default/services.yml
