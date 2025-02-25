@@ -531,7 +531,7 @@ function install_begin_request($class_loader, &$install_state) {
   if ($install_state['config_verified'] && empty($task)) {
     if (count($kernel->getConfigStorage()->listAll())) {
       $task = NULL;
-      //throw new AlreadyInstalledException($container->get('string_translation'));
+      throw new AlreadyInstalledException($container->get('string_translation'));
     }
   }
 
@@ -1144,7 +1144,7 @@ function install_verify_completed_task() {
   }
   if (isset($task)) {
     if ($task == 'done') {
-      //throw new AlreadyInstalledException(\Drupal::service('string_translation'));
+      throw new AlreadyInstalledException(\Drupal::service('string_translation'));
     }
     return $task;
   }
@@ -1193,7 +1193,7 @@ function install_verify_database_ready() {
     }
   }
   if ($existing_install) {
-    //throw new AlreadyInstalledException(\Drupal::service('string_translation'));
+    throw new AlreadyInstalledException(\Drupal::service('string_translation'));
   }
 }
 

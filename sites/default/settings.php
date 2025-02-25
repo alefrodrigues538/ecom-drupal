@@ -88,7 +88,16 @@
  * ];
  * @endcode
  */
-$databases = [];
+ $databases['default']['default'] = [
+    'database' => 'db',
+    'username' => 'db',
+    'password' => 'db',
+    'host' => 'db',
+    'port' => '3306',
+    'driver' => 'mysql',
+    'prefix' => 'neiw_',
+    'collation' => 'utf8mb4_general_ci',
+  ];
 
 /**
  * Customizing database settings.
@@ -887,4 +896,10 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_GiG48xMX86IkQfG1lOuhqemvLJRngbepJCqqmfNXL4dNr-N0VlNmS_K8CABojZK6duA_9ZxrJA/sync';
+$settings['config_sync_directory'] = 'config/sync';
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
